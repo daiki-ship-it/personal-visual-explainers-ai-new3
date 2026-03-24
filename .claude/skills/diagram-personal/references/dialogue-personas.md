@@ -14,14 +14,14 @@
 **学習者**
 
 - **仕様・説明・レビュー**では役割名 **「学習者」** を使う（本ファイルの見出し・表・チェックリスト、他リファレンスの構造説明と同じ）。
-- **HTML で読者に見える吹き出しの太字ラベル**は **`AIまいごん:`**（コロン付きで統一）。[exemplar-layout.html](exemplar-layout.html) のマークアップと同一の文字列を正とする。
-- **学習者左枠**の `aria-label` は **`AIまいごん`**（読み上げ用。役割語「学習者」はラベルには使わない）。詳細は [html-structure.md](html-structure.md) の「対話左枠の画像アバター」。
+- **HTML で読者に見える吹き出しの太字ラベル**は **`ぱにっくん:`**（コロン付きで統一）。[exemplar-layout.html](exemplar-layout.html) のマークアップと同一の文字列を正とする。
+- **学習者左枠**の `aria-label` は **`ぱにっくん`**（読み上げ用。役割語「学習者」はラベルには使わない）。詳細は [html-structure.md](html-structure.md) の「対話左枠の画像アバター」。
 
 **ナビゲーター**
 
 - **仕様・説明・レビュー**では役割名 **「ナビゲーター」** を使う（本ファイルの見出し・表・チェックリスト、他リファレンスの構造説明と同じ）。
-- **HTML で読者に見える吹き出しの太字ラベル**は **`AI博士ウパ:`**（コロン付きで統一）。[exemplar-layout.html](exemplar-layout.html) のマークアップと同一の文字列を正とする。
-- **ナビゲーター左枠**の `aria-label` は **`AI博士ウパ`**（読み上げ用。役割語「ナビゲーター」はラベルには使わない）。詳細は [html-structure.md](html-structure.md) の「対話左枠の画像アバター」。
+- **HTML で読者に見える吹き出しの太字ラベル**は **`ウパ博士:`**（コロン付きで統一）。[exemplar-layout.html](exemplar-layout.html) のマークアップと同一の文字列を正とする。
+- **ナビゲーター左枠**の `aria-label` は **`ウパ博士`**（読み上げ用。役割語「ナビゲーター」はラベルには使わない）。詳細は [html-structure.md](html-structure.md) の「対話左枠の画像アバター」。
 
 左枠のクラス・`alt` / `aria-label`・デプロイ同梱は [html-structure.md](html-structure.md) の **「対話左枠の画像アバター」**、マークアップの型は下記 **「対話左枠の画像アバター（必須）」**。吹き出しの色は **学習者＝紫系（`learner-bubble`）／ナビゲーター＝ローズ系（`guide-bubble`）** で役割を区別する（具体色は [html-structure.md](html-structure.md) 基本テンプレの `:root`）。
 
@@ -63,7 +63,7 @@
   </div>
   <div class="char-bubble learner-bubble flex-1">
     <p class="text-lg">
-      <span class="font-bold label-learner">AIまいごん:</span><br>
+      <span class="font-bold label-learner">ぱにっくん:</span><br>
       公式ページ、長くて用語が連発で……正直、閉じそうになりました。一言でいうと何の話ですか？
     </p>
   </div>
@@ -75,7 +75,7 @@
   </div>
   <div class="char-bubble guide-bubble flex-1">
     <p class="text-lg">
-      <span class="font-bold label-navigator">AI博士ウパ:</span><br>
+      <span class="font-bold label-navigator">ウパ博士:</span><br>
       大丈夫です。ここでいう主題は「<strong>〇〇を、決まった手順で安全に使うための約束事</strong>」です。地図から見ていきましょう。
     </p>
   </div>
@@ -90,24 +90,24 @@
 
 ```html
 <div class="flex items-start gap-4 mb-6">
-  <div class="learner-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="AIまいごん">
+  <div class="learner-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="ぱにっくん">
     <img src="images/learner.png" alt="" class="w-full h-full object-cover" width="48" height="48" />
   </div>
   <div class="char-bubble learner-bubble flex-1">
     <p class="text-lg">
-      <span class="font-bold label-learner">AIまいごん:</span><br>
+      <span class="font-bold label-learner">ぱにっくん:</span><br>
       公式ページ、長くて用語が連発で……正直、閉じそうになりました。一言でいうと何の話ですか？
     </p>
   </div>
 </div>
 
 <div class="flex items-start gap-4 mb-6">
-  <div class="navigator-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="AI博士ウパ">
+  <div class="navigator-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="ウパ博士">
     <img src="images/navigator.png" alt="" class="w-full h-full object-cover" width="48" height="48" />
   </div>
   <div class="char-bubble guide-bubble flex-1">
     <p class="text-lg">
-      <span class="font-bold label-navigator">AI博士ウパ:</span><br>
+      <span class="font-bold label-navigator">ウパ博士:</span><br>
       大丈夫です。ここでいう主題は「<strong>〇〇を、決まった手順で安全に使うための約束事</strong>」です。地図から見ていきましょう。
     </p>
   </div>
@@ -132,7 +132,7 @@
   </div>
   <div class="char-bubble learner-bubble flex-1">
     <p class="text-lg">
-      <span class="font-bold label-learner">AIまいごん:</span><br>
+      <span class="font-bold label-learner">ぱにっくん:</span><br>
       なるほど。私の言葉だと、<strong>「△△は□□のための入り口で、最初に覚えるのは××だけでいい」</strong>、ですね。つまり、そういう理解で合ってますか？
     </p>
   </div>
@@ -145,24 +145,24 @@
 
 ```html
 <div class="flex items-start gap-4 mb-6">
-  <div class="learner-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="AIまいごん">
+  <div class="learner-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="ぱにっくん">
     <img src="images/learner.png" alt="" class="w-full h-full object-cover" width="48" height="48" />
   </div>
   <div class="char-bubble learner-bubble flex-1">
     <p class="text-lg">
-      <span class="font-bold label-learner">AIまいごん:</span><br>
+      <span class="font-bold label-learner">ぱにっくん:</span><br>
       なるほど。私の言葉だと、<strong>「△△は□□のための入り口で、最初に覚えるのは××だけでいい」</strong>、ですね。つまり、そういう理解で合ってますか？
     </p>
   </div>
 </div>
 
 <div class="flex items-start gap-4">
-  <div class="navigator-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="AI博士ウパ">
+  <div class="navigator-avatar w-12 h-12 rounded-xl flex-shrink-0 overflow-hidden shadow-sm" role="img" aria-label="ウパ博士">
     <img src="images/navigator.png" alt="" class="w-full h-full object-cover" width="48" height="48" />
   </div>
   <div class="char-bubble guide-bubble flex-1">
     <p class="text-lg">
-      <span class="font-bold label-navigator">AI博士ウパ:</span><br>
+      <span class="font-bold label-navigator">ウパ博士:</span><br>
       はい、その整理で十分です。今日覚えるのはここまででよい、と割り切って大丈夫です。
     </p>
   </div>
