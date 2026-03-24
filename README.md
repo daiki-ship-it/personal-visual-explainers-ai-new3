@@ -1,8 +1,8 @@
 # パーソナル図解
 
-自分の仕事に特化した図解スキルを作るためのリポジトリです。
+自分の仕事や学びに合わせて、**誰向けに・どう噛み砕いて伝えるか**を最初から決めた図解スキル用のリポジトリです。
 
-配布済みの図解ツールは、誰の仕事にも使える汎用ツールです。パーソナル図解スキルは、この汎用ツールに「読者は誰か」「どう伝えるか」を書き込んだものです。
+このリポジトリの図解は `.claude/skills/diagram-personal/` のワークフローに従います。**自分の前提知識・たとえ話・ゴール**に合わせて設計されています。
 
 ## フォルダの中身
 
@@ -10,7 +10,7 @@
 personal-visual-explainers/
 ├── .claude/skills/
 │   ├── creating-skills/                  ← スキルの作り方ガイド
-│   └── creating-visual-explainers/       ← 図解を生成するスキル（配布済みの図解ツールと同じもの）
+│   └── diagram-personal/                 ← このリポジトリで使う図解スキル（自分向けに設計）
 ├── sample/
 │   └── majiai-diagram/                   ← 作成例（本気AIの図解スキル）
 │       ├── .claude/skills/diagram-maji/  ← スキル本体
@@ -23,13 +23,13 @@ personal-visual-explainers/
 | フォルダ | 説明 |
 |---------|------|
 | `.claude/skills/creating-skills/` | スキルの作り方ガイド。設計原則・パターン集・チェックリストが入っています |
-| `.claude/skills/creating-visual-explainers/` | 図解HTMLを生成するスキル。配布済みの図解ツールと同じものです |
+| `.claude/skills/diagram-personal/` | 調査から図解 HTML・公開までのワークフロー。読者・用語・対話の型は references にまとまっています |
 | `sample/majiai-diagram/` | 図解の作成例。本気AIが実際に使っている図解スキルの構造がわかります |
 | `output/` | 生成した図解の保存先 |
 
 ## まず作成例を見てみる
 
-`sample/majiai-diagram/.claude/skills/diagram-maji/` の中にある SKILL.md と references/ フォルダを開いて読んでみてください。
+`sample/majiai-diagram/.claude/skills/diagram-maji/` の中にある SKILL.md と references/ フォルダを開いて読んでみてください。自分用スキルを新規に書くときの**構造の参考**として読むとよいです（汎用テンプレのコピー元という意味ではありません）。
 
 - **SKILL.md** — スキルの全体設計（どんな順番で何をするかのワークフロー）
 - **references/** — デザインガイド、用語辞書、キャラクター設定など
@@ -44,6 +44,7 @@ personal-visual-explainers/
 ```
   ① ヒアリングシートを埋める
      「誰のどんな問題を解決するか」を言語化する
+     汎用テンプレに足すのではなく、自分の読者とゴールから決める
               ↓
   ② AIにスキルを作ってもらう
      ヒアリングシートをCursorに貼り付けて依頼する
@@ -52,19 +53,20 @@ personal-visual-explainers/
      作成例と見比べて、足りない部分を追加する
               ↓
   ④ 図解を作って試す
-     「○○を図解して」と依頼して、出力を確認する
+     チャットで「開始」と入力し、出力を確認する
 ```
 
 ## 図解を作る
 
-パーソナル図解スキルが完成したら、チャット欄で「○○を図解して」と依頼するだけです。
+パーソナル図解スキルが有効な環境では、チャット欄で **「開始」** と入力すると、最新AIニュース3本のリサーチから図解 HTML 生成・surge.sh デプロイまで進みます（手順の詳細は `.claude/skills/diagram-personal/SKILL.md`）。
 
 生成された図解は `output/` フォルダに保存されます。
 
 ## 図解を共有する
 
-PDF での共有方法や URL での公開方法は、配布済みの図解ツールと同じです。
-図解ツールの README を参照してください。
+公開 URL は `diagram-personal` の手順（surge.sh へのデプロイ）に従います。詳細は `.claude/skills/diagram-personal/SKILL.md` を参照してください。
+
+PDF など別形式での共有は、生成した HTML をブラウザから印刷・エクスポートするなど、ご利用の環境に合わせて行ってください。
 
 ## 困ったとき
 
